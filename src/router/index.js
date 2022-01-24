@@ -22,6 +22,16 @@ const routes = [
                 meta: { title: '首页' }
             },
             {
+                path: '/user/center',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/page/user/center'),
+                meta: { title: '用户中心' }
+            },
+            {
+                path: '/attendence',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/teacher/Attendance'),
+                meta: { title: '考勤管理' }
+            },
+            {
                 path: '/404',
                 component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
                 meta: { title: '404' }

@@ -5,7 +5,7 @@ import { Notification } from 'element-ui';
 axios.defaults.baseURL = "http://localhost:8081"
 
 const request = axios.create({
-    timeout: 5000,
+    timeout: 10000,
     headers: {
         'Content-Type': "application/json; charset=utf-8"
     }
@@ -27,6 +27,7 @@ request.interceptors.response.use(response=> {
             title: "错误",
             message: res.msg
         })
+        return response
     }
 }, error => {
 

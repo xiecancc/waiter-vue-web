@@ -25,7 +25,7 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item divided command="userindex">个人中心</el-dropdown-item>
+                        <el-dropdown-item divided command="usercenter">个人中心</el-dropdown-item>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
@@ -76,8 +76,8 @@ export default {
                     this.$router.push("/login")
                 })
             }
-            if (command == 'userindex') {
-                this.$router.push('/userindex')
+            if (command == 'usercenter') {
+                this.$router.push('/user/center')
             }
         },
         // 侧边栏折叠
